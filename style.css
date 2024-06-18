@@ -11,8 +11,9 @@ h1 {
     justify-content: center;
     align-items: center;
     font-weight: 600;
+    font-size: 50px;
     font-family: 'Poppins', sans-serif;
-    /* margin-top: 40px; */
+    padding-top: 40px;
     background-color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
 }
@@ -49,14 +50,13 @@ body {
     font-weight: 500;
     border-radius: 50%;
     border-style:ridge;
-    background-color: #B2BCAA;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in-out;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
-    /* transition: all 0.3s ease-in-out, text-shadow 0.3s ease-in-out; */
+    background-color: #EDB458;
 }
 
 #button:hover {
@@ -89,3 +89,60 @@ body {
     background-size: 80px;
 }
 
+/*MEDIA QUERIES */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        margin-top: 20px;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        margin-top: 80px;
+        gap: 30px;
+    }
+
+    #button {
+        width: 150px;
+        height: 150px;
+        font-size: 20px;
+    }
+
+    .rock {
+        background-size: 150px;
+    }
+
+    .paper {
+        background-size: 130px;
+    }
+
+    .scissor {
+        background-size: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles for screens up to 480px wide (smaller mobile phones) */
+    h1 {
+        font-size: 28px;
+    }
+
+    #button {
+        width: 120px;
+        height: 120px;
+        font-size: 16px;
+    }
+
+    .rock {
+        background-size: 120px;
+    }
+
+    .paper {
+        background-size: 100px;
+    }
+
+    .scissor {
+        background-size: 50px;
+    }
+}
